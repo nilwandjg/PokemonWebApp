@@ -1,0 +1,89 @@
+﻿@page
+@model PokemonWebApp.Pages.Pokemons.CreateModel
+@{
+}
+
+<h1 class="text-center">Adicionar Pokemon</h1>
+<hr />
+<div class="row">
+    <form method="post">
+        <div class="row">
+            <!--NOME:-->
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="nome" class="control-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" />
+                </div>
+            </div>
+
+            <!--TIPO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="tipo" class="control-label">Tipo</label>
+                    <input type="text" class="form-control" id="tipo" name="tipo" />
+                </div>
+            </div>
+
+            <!--PODERES:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="poderes" class="control-label">Poderes</label>
+                    <input type="text" class="form-control" id="poderes" name="poderes" />
+                </div>
+            </div>
+
+            <!--PESO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="peso" class="control-label">Peso</label>
+                    <input type="text" class="form-control" id="peso" name="peso" />
+                </div>
+            </div>
+
+            <!--ALTURA:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="altura" class="control-label">Altura</label>
+                    <input type="text" class="form-control" id="altura" name="altura" />
+                </div>
+            </div>
+
+            <!--ELEMENTO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="elemento" class="control-label">Elemento</label>
+                    <input type="text" class="form-control" id="elemento" name="elemento" />
+                </div>
+            </div>
+
+            <!--EVOLUÇÃO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="evolucao" class="control-label">Evolução</label>
+                    <input type="text" class="form-control" id="evolucao" name="evolucao" />
+                </div>
+            </div>
+
+            <!--VELOCIDADE:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="velocidade" class="control-label">Velocidade</label>
+                    <input type="text" class="form-control" id="velocidade" name="velocidade" />
+                </div>
+            </div>
+
+            <!--IMAGEM:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="image" class="control-label">Imagem</label>
+                    <input type="text" class="form-control" id="image" name="image" />
+                </div>
+            </div>
+        </div>
+
+        <!--SUBMIT:-->
+        <div class="form-group">
+            <input type="submit" value="Criar" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

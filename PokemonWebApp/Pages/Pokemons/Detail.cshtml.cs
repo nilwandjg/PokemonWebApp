@@ -9,28 +9,34 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 
-namespace PokemonWebApp.Pages
+namespace PokemonWebApp.Pages.Pokemons
 {
-    public class PokemonModel : PageModel
+    public class DetailModel : PageModel
     {
-        public List<Pokemon> Pokemons { get; private set; } = new List<Pokemon>();
-        string baseUrl = "https://localhost:44379/";
-        public async Task OnGetAsync()
+        public Pokemon Pokemon { get; set; }
+        string baseUrl = "https://localhost:44321/";
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseUrl);
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage response = await client.GetAsync("api/Pokemons/" + id);
 
-                HttpResponseMessage response = await client.GetAsync("api/Pokemons");
                 if (response.IsSuccessStatusCode)
                 {
-                    var result = response.Content.ReadAsStringAsync().Result;
-                    Pokemons = JsonConvert.DeserializeObject<List<Pokemon>>(result);
+                    string result = response.Content.ReadAsStringAsync().Result;
+                    Pokemon = JsonConvert.DeserializeObject<Pokemon>(result);
                 }
-          
             }
+
+            return Page();
         }
     }
 }

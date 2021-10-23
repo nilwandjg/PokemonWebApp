@@ -1,0 +1,91 @@
+﻿@page
+@model PokemonWebApp.Pages.Pokemons.EditModel
+@{
+}
+
+<h1 class="text-center">Editar Pokemon</h1>
+<hr />
+<div class="row">
+    <form method="post">
+        <div class="row">
+            <input type="hidden" asp-for="Pokemon.ID" />
+            <!--hidden: campo que não é visualizado na tela.-->
+            <!--NOME:-->
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Pokemon.nome" class="control-label">Nome</label>
+                    <input asp-for="Pokemon.nome" class="form-control" />
+                </div>
+            </div>
+
+            <!--TIPO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.tipo" class="control-label">Tipo</label>
+                    <input asp-for="Pokemon.tipo" class="form-control" />
+                </div>
+            </div>
+
+            <!--PODERES:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.poderes" class="control-label">Poderes</label>
+                    <input asp-for="Pokemon.poderes" class="form-control" />
+                </div>
+            </div>
+
+            <!--PESO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.peso" class="control-label">Peso</label>
+                    <input asp-for="Pokemon.peso" class="form-control" />
+                </div>
+            </div>
+
+            <!--ALTURA:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.altura" class="control-label">Altura</label>
+                    <input asp-for="Pokemon.altura" class="form-control" />
+                </div>
+            </div>
+
+            <!--ELEMENTO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.elemento" class="control-label">Elemento</label>
+                    <input asp-for="Pokemon.elemento" class="form-control" />
+                </div>
+            </div>
+
+            <!--EVOLUÇÃO:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.evolucao" class="control-label">Evolução</label>
+                    <input asp-for="Pokemon.evolucao" class="form-control" />
+                </div>
+            </div>
+
+            <!--VELOCIDADE:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.velocidade" class="control-label">Velocidade</label>
+                    <input asp-for="Pokemon.velocidade" class="form-control" />
+                </div>
+            </div>
+
+            <!--IMAGEM:-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Pokemon.image" class="control-label">Imagem</label>
+                    <input asp-for="Pokemon.image" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <!--SUBMIT:-->
+        <div class="form-group">
+            <input type="submit" value="Editar" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
